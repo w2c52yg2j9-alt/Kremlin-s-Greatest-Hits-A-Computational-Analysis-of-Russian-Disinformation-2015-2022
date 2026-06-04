@@ -92,6 +92,20 @@ python ipe_analysis.py --analyze-only
 
 **Data:** The EUvsDisinfo archive is publicly available at [euvsdisinfo.eu](https://euvsdisinfo.eu). Download and export the full database as CSV. The pipeline expects columns: `Date`, `Disinformation`, `Information`, `Country`.
 
+To download: visit the link above → use the export function to download as CSV
+→ rename the file to `euvsdisinfo_all_texts_rename.csv`
+→ place it in this `data/` folder
+
+
+### labeled_data.csv
+700 disinformation claims manually annotated by the author with GEO and ID scores
+(0–3 scale). Includes 241 annotation notes documenting rhetorical patterns.
+Used to train the Gradient Boosting classifier.
+
+
+
+Then run:
+    python ipe_analysis.py --data data/euvsdisinfo_all_texts_rename.csv
 ---
 
 ## Selected Findings
